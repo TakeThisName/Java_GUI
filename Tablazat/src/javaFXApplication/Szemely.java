@@ -35,11 +35,15 @@ public class Szemely {
 		return this.keresztnev;
 	}
 
-	public SimpleIntegerProperty getId() {
-		return id;
+	public final Integer getId(int id) {
+		return this.id.get();
 	}
 
-	public void setId(SimpleIntegerProperty id) {
-		this.id = id;
+	public final void setId(int id) {
+		this.idProperty().set(id);
+	}
+	
+	public final SimpleIntegerProperty idProperty() {
+		return this.id;
 	}
 }
