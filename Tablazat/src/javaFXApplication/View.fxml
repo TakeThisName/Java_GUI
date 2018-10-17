@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXApplication.ViewController">
+   <children>
+      <BorderPane layoutX="232.0" layoutY="36.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tabla_ID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="Tabla_Vezeteknev" prefWidth="155.0" text="Vezetéknév" />
+                  <TableColumn fx:id="Tabla_Keresztnev" prefWidth="158.0" text="Keresztnév" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="TextF_Keresztnev" layoutX="14.0" layoutY="88.0" />
+                  <TextField fx:id="TextF_Veznev" layoutX="14.0" layoutY="141.0" />
+                  <TextField fx:id="TextF_ID" layoutX="14.0" layoutY="36.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="ID" />
+                  <Label layoutX="14.0" layoutY="71.0" text="Keresztnév" />
+                  <Label layoutX="14.0" layoutY="124.0" text="Vezetéknév" />
+                  <Button fx:id="Button_Add" layoutX="208.0" layoutY="141.0" mnemonicParsing="false" onAction="#Add_Button" text="Hozzáad" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
