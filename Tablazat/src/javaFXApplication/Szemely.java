@@ -10,40 +10,43 @@ public class Szemely {
 	private SimpleStringProperty vezeteknev;
 	private SimpleStringProperty keresztnev;
 	
-	public final String getVezeteknev(String vezeteknev) {
-		return this.vezeteknev.get();
+	
+	public final SimpleIntegerProperty idProperty() {
+		return this.id;
 	}
 	
-	public final void setVezeteknev(String vezeteknev) {
-		this.vezeteknevProperty().set(vezeteknev);
+	public final int getId() {
+		return this.idProperty().get();
 	}
-
+	
+	public final void setId(final int id) {
+		this.idProperty().set(id);
+	}
+	
 	public final SimpleStringProperty vezeteknevProperty() {
 		return this.vezeteknev;
 	}
 	
-	
-	public final String getKeresztnev(String keresztnev) {
-		return this.keresztnev.get();
+	public final String getVezeteknev() {
+		return this.vezeteknevProperty().get();
 	}
 	
-	public final void setKeresztnev(String keresztnev) {
-		this.keresztnevProperty().set(keresztnev);
+	public final void setVezeteknev(final String vezeteknev) {
+		this.vezeteknevProperty().set(vezeteknev);
 	}
 	
 	public final SimpleStringProperty keresztnevProperty() {
 		return this.keresztnev;
 	}
-
-	public final Integer getId(int id) {
-		return this.id.get();
-	}
-
-	public final void setId(int id) {
-		this.idProperty().set(id);
+	
+	public final String getKeresztnev() {
+		return this.keresztnevProperty().get();
 	}
 	
-	public final SimpleIntegerProperty idProperty() {
-		return this.id;
+	public final void setKeresztnev(final String keresztnev) {
+		this.keresztnevProperty().set(keresztnev);
 	}
+	
+	
+	
 }
