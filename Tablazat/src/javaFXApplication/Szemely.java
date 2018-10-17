@@ -46,6 +46,13 @@ public class Szemely {
 	public final void setKeresztnev(final String keresztnev) {
 		this.keresztnevProperty().set(keresztnev);
 	}
+
+	public Szemely(int id, String vezeteknev, String keresztnev) {
+		
+		this.id = new SimpleIntegerProperty(id);
+		this.vezeteknev = new SimpleStringProperty(vezeteknev);
+		this.keresztnev = new SimpleStringProperty(keresztnev);
+	}
 	
 	
 	
